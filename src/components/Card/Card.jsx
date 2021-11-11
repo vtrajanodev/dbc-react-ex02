@@ -1,4 +1,6 @@
 export const Card = ({ listaDeTrabalhadores, excluir }) => {
+
+    
     return (
         <div className="flex">
             {listaDeTrabalhadores.map(t => (
@@ -12,3 +14,4 @@ export const Card = ({ listaDeTrabalhadores, excluir }) => {
         </div>
     );
 }
+
