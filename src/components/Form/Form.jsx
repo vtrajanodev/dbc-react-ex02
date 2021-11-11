@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Card } from '../Card/Card';
 import './Form.modules.css';
 
 export const Form = () => {
@@ -64,16 +65,8 @@ export const Form = () => {
 
                 {listaDeTrabalhadores.length > 0 && (<h2>Trabalhadores cadastrados</h2>)}
 
-                <div className="flex">
-                    {listaDeTrabalhadores.map(t => (
-                        <div className="card">
-                            <h3>Usuário: {t.nome}</h3>
-                            <p>E-mail: {t.email}</p>
-                            <p>Profissão: {t.profissao}</p>
-                            <button onClick={() => removeUsuario(t.id)}>Remover</button>
-                        </div>
-                    ))}
-                </div>
+
+                <Card listaDeTrabalhadores={listaDeTrabalhadores} excluir={removeUsuario}/>
             </div>
         </>
     );
