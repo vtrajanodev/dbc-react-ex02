@@ -9,18 +9,15 @@ export const Form = () => {
     const [profissao, setProfissao] = useState('')
     const [listaDeTrabalhadores, setListaDeTrabalhadores] = useState([])
 
-  
-
     const cadastraTrabalhador = (e) => {
         console.log(listaDeTrabalhadores)
         e.preventDefault();
-        
 
         if (nome === '' || email === '' || profissao === '') {
             alert('Por favor não deixe nenhum campo vazio no cadastro.')
             return false
         }
-
+        
         setListaDeTrabalhadores([...listaDeTrabalhadores, {
             id: listaDeTrabalhadores.length + 1,
             nome: nome,
@@ -65,7 +62,7 @@ export const Form = () => {
 
                 {listaDeTrabalhadores.length > 0 && (<h2>Trabalhadores cadastrados</h2>)}
 
-                <Card listaDeTrabalhadores={listaDeTrabalhadores} excluir={removeUsuario}/>
+                <Card listaDeTrabalhadores={listaDeTrabalhadores} excluir={removeUsuario} />
             </div>
         </>
     );
