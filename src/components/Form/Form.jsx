@@ -66,7 +66,7 @@ export const Form = () => {
 
                 <div className="flex">
                     {listaDeTrabalhadores.map(t => (
-                        <div className=" card">
+                        <div className="card">
                             <h3>Usuário: {t.nome}</h3>
                             <p>E-mail: {t.email}</p>
                             <p>Profissão: {t.profissao}</p>
