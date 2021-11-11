@@ -65,7 +65,6 @@ export const Form = () => {
 
                 {listaDeTrabalhadores.length > 0 && (<h2>Trabalhadores cadastrados</h2>)}
 
-
                 <Card listaDeTrabalhadores={listaDeTrabalhadores} excluir={removeUsuario}/>
             </div>
         </>
